@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Automatic Leaderboard Submission</title>
+  </head>
+  <body>
+    <form id="leaderboard-form" action="https://comp3320-xss.uqcloud.net/leaderboard.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <script>
+      window.onload = function() {
+        document.getElementById('name').value = 'Your Name'; // Set the value of the "name" field to your desired name
+        document.getElementById('leaderboard-form').submit(); // Submit the form automatically
+      };
+    </script>
+  </body>
+</html>
